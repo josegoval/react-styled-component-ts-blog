@@ -1,6 +1,7 @@
 import React from "react";
 import Avatar from "../../components/Avatar";
 import PostCard from "../../components/Posts/PostCard";
+import UncontrolledPostList from "../../components/Posts/UncontrolledPostList";
 import { H1, H2, Subtitle } from "../../components/Typography";
 import usePosts from "../../hooks/usePosts";
 import { Container, Header, PostSection, SectionTitle } from "./styles";
@@ -8,8 +9,6 @@ import { Container, Header, PostSection, SectionTitle } from "./styles";
 type Props = {};
 
 export default function HomePage({}: Props) {
-  const { posts } = usePosts();
-
   return (
     <Container>
       <Header>
@@ -21,10 +20,8 @@ export default function HomePage({}: Props) {
       </Header>
       <PostSection>
         <SectionTitle>Latest posts</SectionTitle>
+        <UncontrolledPostList />
       </PostSection>
-      {posts?.map((post) => (
-        <PostCard post={post} />
-      ))}
     </Container>
   );
 }

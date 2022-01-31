@@ -20,7 +20,7 @@ export const Subtitle = styled.p`
   font-size: 2rem;
   font-weight: 400;
   font-style: italic;
-  padding: 0;
+  padding: 0 10px;
   margin: 5px;
   color: ${({ theme: { colors } }) => colors.text};
 `;

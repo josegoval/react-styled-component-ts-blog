@@ -16,6 +16,7 @@ export const Header = styled.header`
 export const SectionTitle = styled(H2)`
   text-decoration: underline;
   margin-bottom: 20px;
+  margin-left: 40px;
 `;
 
 export const PostSection = styled.section``;

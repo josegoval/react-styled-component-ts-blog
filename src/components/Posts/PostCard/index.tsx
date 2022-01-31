@@ -1,6 +1,6 @@
 import React from "react";
 import { Post } from "../../../types/post";
-import { Container, Content, Image, Title } from "./styles";
+import { Container, Content, DomLink, Image, Title } from "./styles";
 import { P } from "../../Typography";
 import { ellipsize } from "../../../utils/texts";
 import FALLBACK_IMAGE_SRC from "../../../assets/blog-fallback-image.jpg";
@@ -11,7 +11,7 @@ type Props = {
 
 export default function PostCard({ post }: Props) {
   return (
-    <Link to={`posts/${post.id}`}>
+    <DomLink to={`posts/${post.id}`}>
       <Container>
         <Image
           src={post.image || FALLBACK_IMAGE_SRC}
@@ -22,6 +22,6 @@ export default function PostCard({ post }: Props) {
           <P>{ellipsize(post.body, 100)}</P>
         </Content>
       </Container>
-    </Link>
+    </DomLink>
   );
 }

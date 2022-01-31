@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { H1 } from "../../Typography";
 
@@ -28,4 +29,8 @@ export const Image = styled.img`
   object-fit: cover;
   border-top-left-radius: 7px;
   border-top-right-radius: 7px;
+`;
+
+export const DomLink = styled(Link)`
+  text-decoration: none;
 `;
